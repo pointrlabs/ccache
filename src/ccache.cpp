@@ -2578,6 +2578,14 @@ process_args(Context& ctx,
       }
       continue;
     }
+    if (str_eq(argv[i], "-fprofile-instr-generate")) {
+      args_add(common_args, argv[i]);
+      continue;
+    }
+    if (str_eq(argv[i], "-fcoverage-mapping")) {
+      args_add(common_args, argv[i]);
+      continue;
+    }
     if (str_eq(argv[i], "-fprofile-arcs")) {
       args_info.profile_arcs = true;
       args_add(common_args, argv[i]);
